@@ -1,0 +1,18 @@
+<h1>Music Directory</h1>
+<div class='row'>
+  <div class='col-lg-2'>
+    <h4>All Albums</h4>
+    <div class='list-unstyled'>
+      {{# each }}
+        <li>
+          {{# link-to "product" this }}
+            <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
+          {{/ link-to }}
+        </li>
+        {{/ each }}
+    </div>
+  </div>
+  <div class='col-lg-10'>
+    {{ outlet }}
+  </div>
+</div>
