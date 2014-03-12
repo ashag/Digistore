@@ -3,7 +3,7 @@ App.Product = DS.Model.extend({
   description: DS.attr("string"),
   price: DS.attr("number"),
   image: DS.attr("string")
-})
+});
 
 
 App.Product.FIXTURES = [
