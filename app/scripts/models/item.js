@@ -3,7 +3,7 @@ App.Item = DS.Model.extend({
   // async allows method item.product
   cart: DS.belongsTo("cart"),
   quantity: DS.attr("number"),
-  price: DS.attr("number")
+  subtotal: DS.attr("number")
 })
 
 App.Item.FIXTURES = [
@@ -12,13 +12,13 @@ App.Item.FIXTURES = [
     product: 1,
     cart: 1,
     quantity: 1,
-    price: 10
+    subtotal: 10
   }, {
     id: 2,
     product: 2,
     cart: 1,
     quantity: 1,
-    price: 10
+    subtotal: 10
   }
   
 ]

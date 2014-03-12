@@ -1,13 +1,37 @@
 <h1>This is a cart</h1>
 
-<div class='row'>
-  <div class='col-lg-2'>
-   {{# each items }}
-  <li>
-    <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
+<table class="table">
+  <thead>
+    <tr>
+      <th>Album</th>
+      <th>Item Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  </thead>
+    <tbody>
+      {{# each items }}
+    <tr>
+      <td>
+        <img {{ bind-attr src=product.image }} class='album-image' /><br>
+        {{ product.artist }}
+      </td>
+      <td> ${{ product.price }}</td>
+      <td> {{ quantity }}
+        <button {{ action 'less' this }}>-</button> 
+        <button {{ action 'more' this }}>+</button> 
+      </td>
+      <td> ${{ subtotal product.price quantity }}</td>
+      <td><button {{ action 'deleteItem' this }}>Delete</button></td>
+    </tr>
+    {{/ each}}
+    <tr>
+    <td>TOTAL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
 
-    <button {{ action 'deleteItem' this }}>Delete</button>
-  </li>
-  {{/ each}}
-  </div>
-</div>
+
+</table>

@@ -1,3 +1,3 @@
-App.CartContoller = Ember.ObjectController.extend({
+App.CartController = Ember.ObjectController.extend({
   
 })
