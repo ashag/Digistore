@@ -7,7 +7,7 @@ App.CartRoute = Ember.Route.extend({
       item.decrementProperty("quantity");
     },
     deleteItem: function (item) {
-      
+      this.store.deleteRecord(item)
     }
   },
   model: function () {

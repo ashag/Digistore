@@ -1,1 +1,4 @@
-<h1>This is the Digistore Homepage. </h1>
+{{# each }}
+  <img {{ bind-attr src=image }} class='album-image' />
+{{/ each}}
+{{ cart }}
