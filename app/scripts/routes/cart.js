@@ -8,6 +8,9 @@ App.CartRoute = Ember.Route.extend({
     },
     deleteItem: function (item) {
       this.store.deleteRecord(item)
+    },
+    total: function (subtotal) {
+      
     }
   },
   model: function () {

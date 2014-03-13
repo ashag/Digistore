@@ -6,7 +6,9 @@
       <th>Album</th>
       <th>Item Price</th>
       <th>Quantity</th>
-      <th>Subtotal</th>
+      <th>Total</th>
+      <th>taxTotal</th>
+
       <th></th>
     </tr>
   </thead>
@@ -22,7 +24,11 @@
         <button {{ action 'less' this }}>-</button> 
         <button {{ action 'more' this }}>+</button> 
       </td>
-      <td> ${{ subtotal product.price quantity }}</td>
+      <td> ${{ total }}</td>
+      <td> ${{ taxTotal }}</td>
+
+      <td></td>
+      <td></td>
       <td><button {{ action 'deleteItem' this }}>Delete</button></td>
     </tr>
     {{/ each}}
