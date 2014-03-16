@@ -1,15 +1,14 @@
 App.Item = DS.Model.extend({
   product: DS.belongsTo("product",  { async: true }),
-  // async allows method item.product
   cart: DS.belongsTo("cart"),
   quantity: DS.attr("number"),
   price: DS.attr("number"),
-  total: function () {
+  itemTotal: function () {
     return this.get("quantity") * this.get("price")
   }.property("quantity", "price"),
   taxTotal: function() {
-    return this.get("total") * 2
-  }.property("total", "taxTotal")
+    return this.get("itemTotal") * 1.887
+  }.property("itemTotal", "taxTotal")
 })
 
 App.Item.FIXTURES = [

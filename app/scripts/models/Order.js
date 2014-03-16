@@ -1,6 +1,6 @@
 App.Order = DS.Model.extend({
-  cart_id: DS.attr("number"),
-  name: DS.attr("string"),
+  cart: DS.belongsTo("cart"),
+  customerName: DS.attr("string"),
   email: DS.attr("string"),
   total: DS.attr("number"),
   status: DS.attr("string"),

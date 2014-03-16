@@ -8,6 +8,8 @@
           {{# link-to "product" this }}
             <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
           {{/ link-to }}
+          <em>{{ artist }}</em>
+          <em>$ {{ price }}</em>
         </li>
         {{/ each }}
     </div>
