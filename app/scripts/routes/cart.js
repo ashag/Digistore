@@ -7,14 +7,15 @@ App.CartRoute = Ember.Route.extend({
       item.decrementProperty("quantity");
     },
     deleteItem: function (item) {
-      this.store.find("cart", 1).then( function (cart){
+      this.store.find("cart", localStorage.cartId).then( function (cart){
         cart.get("items").then( function(items){
           items.removeObject(item)
-          })
-        });
-      }  
+          item.deleteRecord()
+        })
+      });
+    }  
   },
   model: function () {
-    return this.store.find("cart", 1)
+    return this.modelFor("application")
   }
 })

@@ -11,19 +11,19 @@ App.Item = DS.Model.extend({
   }.property("itemTotal", "taxTotal")
 })
 
-App.Item.FIXTURES = [
-  {
-    id: 1,
-    product: 1,
-    cart: 1,
-    quantity: 1,
-    price: 10
-  }, {
-    id: 2,
-    product: 2,
-    cart: 1,
-    quantity: 1,
-    price: 10
-  }
+// App.Item.FIXTURES = [
+//   {
+//     id: 1,
+//     product: 1,
+//     cart: 1,
+//     quantity: 1,
+//     price: 10
+//   }, {
+//     id: 2,
+//     product: 2,
+//     cart: 1,
+//     quantity: 1,
+//     price: 10
+//   }
   
-]
+// ]

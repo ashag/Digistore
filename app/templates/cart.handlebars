@@ -38,8 +38,12 @@
     <td></td>
     <td></td>
     <td>$ {{ total }} </td>
-
     </tr>
+    </table>
 
+    {{# link-to 'cart.new' class='btn btn-default btn-block btn-sm'}}Checkout{{/link-to}}
 
-</table>
+    <div class='col-lg-10'>
+    {{outlet}}
+    </div>
+
