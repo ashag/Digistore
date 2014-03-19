@@ -18,10 +18,11 @@ App.ProductRoute = Ember.Route.extend({
           quantity: 1,
           price: product.get("price")
         })
+        item.save().then(function(){ 
         cart.get("items").then( function(items) {
-          items.pushObject(item)
+          items.pushObject(item) 
+          })
         })
-        item.save();
       });
       this.transitionTo("cart")
     }

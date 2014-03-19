@@ -174,7 +174,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'valueBinding': ("model.zip_code")
   },hashTypes:{'type': "STRING",'valueBinding': "STRING"},hashContexts:{'type': depth0,'valueBinding': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  <br>\n  <button ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "create", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "createOrder", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">Purchase</button>\n</div>");
   return buffer;
   
