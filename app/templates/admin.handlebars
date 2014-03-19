@@ -1,0 +1,21 @@
+<h1>Admin Page</h1> 
+
+<div class='col-lg-2'>
+  <h4>All Albums</h4>
+  <div class='list-unstyled'>
+    {{# each }}
+      <li>
+        <strong>{{ artist }}</strong>
+        <strong>$ {{ price }}</strong>
+        {{# link-to "product" this }}
+          <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
+        {{/ link-to }}
+        <button {{ action 'edit' this }}>Update</button>
+        <button {{ action 'delete' this }}>Delete</button>
+
+      </li>
+      {{/ each }}
+  </div>
+<button {{ action 'createProduct' }}>Create Product</button>
+
+</div>

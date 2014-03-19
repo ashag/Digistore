@@ -7,7 +7,6 @@ App.CartRoute = Ember.Route.extend({
       var q = item.get("quantity")
       if(q > 0)
         item.decrementProperty("quantity")
-      end
     },
     deleteItem: function (item) {
       this.store.find("cart", localStorage.cartId).then( function (cart){

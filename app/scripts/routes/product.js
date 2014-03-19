@@ -1,14 +1,9 @@
 App.ProductRoute = Ember.Route.extend({
   actions: {
     // findOrCreate: function (product) {
-    //   this.store.find("cart", 1).then( function (cart){
-    //     cart.get("items").then( function(items){
-    //       var findItem = items.find(product)
-    //       console.log(findItem)
-    //       if findItem 
-    //         this.routeFor("cart").more()
-    //       else
-    //         addToCart
+    //   this.store.find("cart", localStorage.cartId).then( function (cart){
+    //     if(cart.get("items") == product)
+          
     //     })
     //   })
     // },

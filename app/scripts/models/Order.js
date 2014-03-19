@@ -7,7 +7,6 @@ App.Order = DS.Model.extend({
   cc_info: DS.attr("string"),
   cc_cvv: DS.attr("string"),
   cc_exp: DS.attr("string"),
-  cc_zip: DS.attr("string"),
   zip_code: DS.attr("string"),
   transaction: DS.attr("string")
 })

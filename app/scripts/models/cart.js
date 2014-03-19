@@ -13,8 +13,8 @@ App.Cart = DS.Model.extend({
   }.property("items.@each.taxTotal")
 });
 
-App.Cart.FIXTURES = [
-  {
-    id: "fixture-0"
-  }
-]
+// App.Cart.FIXTURES = [
+//   {
+//     id: "fixture-0"
+//   }
+// ]
