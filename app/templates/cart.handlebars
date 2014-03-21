@@ -6,8 +6,8 @@
       <th>Album</th>
       <th>Item Price</th>
       <th>Quantity</th>
-      <th>Total</th>
-      <th>taxTotal</th>
+      <th>Subtotal</th>
+      <th>Total w/ tax</th>
 
       <th></th>
     </tr>
@@ -41,7 +41,7 @@
     </tr>
     </table>
 
-    {{# link-to 'cart.new' class='btn btn-default btn-block btn-sm'}}Checkout{{/link-to}}
+    {{# link-to 'cart.new' class='btn btn-primary'}}Checkout{{/link-to}}
 
     <div class='col-lg-10'>
     {{outlet}}

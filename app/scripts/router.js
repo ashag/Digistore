@@ -10,4 +10,5 @@ App.Router.map(function(){
     this.resource("order", { path: ":order_id" });
   })
   this.resource("admin")
+  this.route("confirmation")
 });

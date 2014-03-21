@@ -1,28 +1,26 @@
 App.ProductRoute = Ember.Route.extend({
   actions: {
-    // findOrCreate: function (product) {
-    //   this.store.find("cart", localStorage.cartId).then( function (cart){
-    //     if(cart.get("items") == product)
-          
-    //     })
-    //   })
-    // },
-
     addToCart: function (product) {
       var store = this.store;
-      // localStorage.cartId = 1
-      this.store.find("cart", localStorage.cartId).then( function (cart){
-        var item = store.createRecord("item", {
-          cart: cart,
-          product: product, 
-          quantity: 1,
-          price: product.get("price")
+      var cart = this.modelFor("application");
+      cart.get("items").then( function(items){
+        return  items.find( function(item) {
+          return item.get("product").get("id") == product.get("id")
         })
-        item.save().then(function(){ 
-        cart.get("items").then( function(items) {
-          items.pushObject(item) 
-          })
-        })
+      }).then(function (item) {
+        if(item) {
+         item.incrementProperty("quantity")
+         item.save();
+        } else {
+          var item = store.createRecord("item", {
+            cart: cart,
+            product: product,
+            quantity: 1, 
+            price: product.get("price")
+          });
+          cart.get("items").pushObject(item);
+          item.save();
+        }
       });
       this.transitionTo("cart")
     }

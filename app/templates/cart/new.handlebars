@@ -1,24 +1,37 @@
 <h1>Checkout</h1>
 
 
-<div class="order-form">
-  <label>Enter name</label>
-  {{input type='text' valueBinding='model.customerName'}}
-  <br>
-  <label>Enter email</label>
-  {{input type='text' valueBinding='model.email'}}
-  <br>
-  <label>Enter credit card numbers</label>
-  {{input type='text' valueBinding='model.cc_info'}}
-  <br>
-  <label>CVV</label>
-  {{input type='text' valueBinding='model.cc_cvv'}}
-  <br>
-  <label>CC expiration date</label>
-  {{input type='text' valueBinding='model.cc_exp'}}
-  <br>
-  <label>Zip Code</label>
-  {{input type='text' valueBinding='model.zip_code'}}
-  <br>
-  <button {{ action 'createOrder' this }}>Purchase</button>
+<form role="form">
+  <div class="form-group">
+    <label>Name</label>
+    {{input type='text' class="form-control" valueBinding='model.customerName'}}
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    {{input type='text' class="form-control" valueBinding='model.email'}}
+  </div>
+
+  <div class="form-group">
+    <label>Credit card number</label>
+    {{input type='text' class="form-control" valueBinding='model.cc_info'}}
+  </div>
+
+  <div class="form-group">
+    <label>CVV</label>
+    {{input type='text' class="form-control" valueBinding='model.cc_cvv'}}
+  </div>
+
+  <div class="form-group">
+    <label>CC expiration date</label>
+    {{input type='text' class="form-control" valueBinding='model.cc_exp'}}
+  </div>
+
+  <div class="form-group">
+    <label>Zip Code</label>
+    {{input type='text' class="form-control" valueBinding='model.zip_code'}}
+  </div>
+    <button {{ action 'createOrder' this }}>Purchase</button>
 </div>
+<br>
+<br>
